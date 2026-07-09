@@ -11,7 +11,7 @@ NMWC 팀 Claude Code skill 마켓플레이스.
 
 ## 스킬 등록 절차
 
-1. `skills/<skill-name>/SKILL.md`로 원본 스킬 파일을 복사한다.
+1. `skills/<skill-name>/SKILL.md`로 원본 스킬 파일을 복사한다. 복사한 `SKILL.md`의 frontmatter에 `name`이 있는지 확인한다 (없으면 마켓플레이스 설치 시 스킬 이름이 버전 문자열로 바뀜).
 2. `skills/<skill-name>/.claude-plugin/plugin.json`을 만든다:
    ```json
    {

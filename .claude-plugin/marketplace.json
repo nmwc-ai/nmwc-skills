@@ -1,7 +1,7 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "nmwc-skills",
   "description": "NMWC 팀 내부 Claude Code skill 라이브러리",
-  "owner": { "name": "NMWC", "url": "https://nmwc.ai.kr" },
+  "owner": { "name": "NMWC" },
   "plugins": []
 }
