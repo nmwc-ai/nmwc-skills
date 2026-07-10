@@ -2,6 +2,99 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "nmwc-skills",
   "description": "NMWC 팀 내부 Claude Code skill 라이브러리",
-  "owner": { "name": "NMWC" },
-  "plugins": []
+  "owner": {
+    "name": "NMWC"
+  },
+  "plugins": [
+    {
+      "name": "gstack-review",
+      "description": "Pre-landing PR review. Analyzes diff against the base branch for SQL safety, LLM trust boundary violations, conditional side effects, and other structural issues. Use when asked to \"review this PR\", \"code review\", \"pre-landing review\", or \"check my diff\". Proactively suggest when the user is about to merge or land code changes. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-review",
+      "category": "gstack",
+      "tags": [
+        "pr",
+        "code-review"
+      ]
+    },
+    {
+      "name": "gstack-qa",
+      "description": "Systematically QA test a web application and fix bugs found. Runs QA testing, then iteratively fixes bugs in source code, committing each fix atomically and re-verifying. Use when asked to \"qa\", \"QA\", \"test this site\", \"find bugs\", \"test and fix\", or \"fix what's broken\". Proactively suggest when the user says a feature is ready for testing or asks \"does this work?\". Three tiers: Quick (critical/high only), Standard (+ medium), Exhaustive (+ cosmetic). Produces before/after health scores, fix evidence, and a ship-readiness summary. For report-only mode, use /qa-only. (gstack) Voice triggers (speech-to-text aliases): \"quality check\", \"test the app\", \"run QA\".",
+      "version": "2.0.0",
+      "source": "./skills/gstack-qa",
+      "category": "gstack",
+      "tags": [
+        "qa",
+        "testing"
+      ]
+    },
+    {
+      "name": "gstack-ship",
+      "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. Use when asked to \"ship\", \"deploy\", \"push to main\", \"create a PR\", \"merge and push\", or \"get it deployed\". Proactively invoke this skill (do NOT push/PR directly) when the user says code is ready, asks about deploying, wants to push code up, or asks to create a PR. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ship",
+      "category": "gstack",
+      "tags": [
+        "deploy",
+        "pr",
+        "release"
+      ]
+    },
+    {
+      "name": "gstack-cso",
+      "description": "Chief Security Officer mode. Infrastructure-first security audit: secrets archaeology, dependency supply chain, CI/CD pipeline security, LLM/AI security, skill supply chain scanning, plus OWASP Top 10, STRIDE threat modeling, and active verification. Two modes: daily (zero-noise, 8/10 confidence gate) and comprehensive (monthly deep scan, 2/10 bar). Trend tracking across audit runs. Use when: \"security audit\", \"threat model\", \"pentest review\", \"OWASP\", \"CSO review\". (gstack) Voice triggers (speech-to-text aliases): \"see-so\", \"see so\", \"security review\", \"security check\", \"vulnerability scan\", \"run security\".",
+      "version": "2.0.0",
+      "source": "./skills/gstack-cso",
+      "category": "gstack",
+      "tags": [
+        "security",
+        "audit"
+      ]
+    },
+    {
+      "name": "gstack-investigate",
+      "description": "Systematic debugging with root cause investigation. Four phases: investigate, analyze, hypothesize, implement. Iron Law: no fixes without root cause. Use when asked to \"debug this\", \"fix this bug\", \"why is this broken\", \"investigate this error\", or \"root cause analysis\". Proactively invoke this skill (do NOT debug directly) when the user reports errors, 500 errors, stack traces, unexpected behavior, \"it was working yesterday\", or is troubleshooting why something stopped working. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-investigate",
+      "category": "gstack",
+      "tags": [
+        "debugging",
+        "root-cause"
+      ]
+    },
+    {
+      "name": "gstack-design-review",
+      "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots. For plan-mode design review (before implementation), use /plan-design-review. Use when asked to \"audit the design\", \"visual QA\", \"check if it looks good\", or \"design polish\". Proactively suggest when the user mentions visual inconsistencies or wants to polish the look of a live site. (gstack)",
+      "version": "2.0.0",
+      "source": "./skills/gstack-design-review",
+      "category": "gstack",
+      "tags": [
+        "design",
+        "qa",
+        "frontend"
+      ]
+    },
+    {
+      "name": "gstack-health",
+      "description": "Code quality dashboard. Wraps existing project tools (type checker, linter, test runner, dead code detector, shell linter), computes a weighted composite 0-10 score, and tracks trends over time. Use when: \"health check\", \"code quality\", \"how healthy is the codebase\", \"run all checks\", \"quality score\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-health",
+      "category": "gstack",
+      "tags": [
+        "quality",
+        "dashboard"
+      ]
+    },
+    {
+      "name": "gstack-retro",
+      "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware: breaks down per-person contributions with praise and growth areas. Use when asked to \"weekly retro\", \"what did we ship\", or \"engineering retrospective\". Proactively suggest at the end of a work week or sprint. (gstack)",
+      "version": "2.0.0",
+      "source": "./skills/gstack-retro",
+      "category": "gstack",
+      "tags": [
+        "retrospective",
+        "reporting"
+      ]
+    }
+  ]
 }
