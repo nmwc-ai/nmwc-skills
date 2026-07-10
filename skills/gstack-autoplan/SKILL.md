@@ -1,0 +1,1 @@
+../../vendor/gstack/autoplan/SKILL.md

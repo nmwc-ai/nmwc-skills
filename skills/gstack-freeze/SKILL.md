@@ -1,0 +1,1 @@
+../../vendor/gstack/freeze/SKILL.md

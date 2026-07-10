@@ -1,0 +1,1 @@
+../../vendor/gstack/make-pdf/SKILL.md

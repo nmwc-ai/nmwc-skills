@@ -1,0 +1,1 @@
+../../vendor/gstack/pair-agent/SKILL.md
