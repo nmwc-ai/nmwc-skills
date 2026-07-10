@@ -1,0 +1,1 @@
+../../vendor/gstack/health/SKILL.md
