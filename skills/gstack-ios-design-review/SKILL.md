@@ -1,0 +1,1 @@
+../../vendor/gstack/ios-design-review/SKILL.md

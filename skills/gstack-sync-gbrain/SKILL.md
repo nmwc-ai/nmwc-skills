@@ -1,0 +1,1 @@
+../../vendor/gstack/sync-gbrain/SKILL.md

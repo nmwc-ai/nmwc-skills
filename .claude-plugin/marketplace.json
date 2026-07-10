@@ -95,6 +95,358 @@
         "retrospective",
         "reporting"
       ]
+    },
+    {
+      "name": "gstack",
+      "description": "Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with elements, verify state, diff before/after, take annotated screenshots, test responsive layouts, forms, uploads, dialogs, and capture bug evidence. Use when asked to open or test a site, verify a deployment, dogfood a user flow, or file a bug with screenshots. (gstack)",
+      "version": "1.1.0",
+      "source": "./skills/gstack",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-autoplan",
+      "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. Surfaces taste decisions (close approaches, borderline scope, codex disagreements) at a final approval gate. One command, fully reviewed plan out. Use when asked to \"auto review\", \"autoplan\", \"run all reviews\", \"review this plan automatically\", or \"make the decisions for me\". Proactively suggest when the user has a plan file and wants to run the full review gauntlet without answering 15-30 intermediate questions. (gstack) Voice triggers (speech-to-text aliases): \"auto plan\", \"automatic review\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-autoplan",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-benchmark",
+      "description": "Performance regression detection using the browse daemon. Establishes baselines for page load times, Core Web Vitals, and resource sizes. Compares before/after on every PR. Tracks performance trends over time. Use when: \"performance\", \"benchmark\", \"page speed\", \"lighthouse\", \"web vitals\", \"bundle size\", \"load time\". (gstack) Voice triggers (speech-to-text aliases): \"speed test\", \"check performance\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-benchmark",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-benchmark-models",
+      "description": "Cross-model benchmark for gstack skills. Runs the same prompt through Claude, GPT (via Codex CLI), and Gemini side-by-side — compares latency, tokens, cost, and optionally quality via LLM judge. Answers \"which model is actually best for this skill?\" with data instead of vibes. Separate from /benchmark, which measures web page performance. Use when: \"benchmark models\", \"compare models\", \"which model is best for X\", \"cross-model comparison\", \"model shootout\". (gstack) Voice triggers (speech-to-text aliases): \"compare models\", \"model shootout\", \"which model is best\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-benchmark-models",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-browse",
+      "description": "Fast headless browser for QA testing and site dogfooding. Navigate any URL, interact with elements, verify page state, diff before/after actions, take annotated screenshots, check responsive layouts, test forms and uploads, handle dialogs, and assert element states. ~100ms per command. Use when you need to test a feature, verify a deployment, dogfood a user flow, or file a bug with evidence. Use when asked to \"open in browser\", \"test the site\", \"take a screenshot\", or \"dogfood this\". (gstack)",
+      "version": "1.1.0",
+      "source": "./skills/gstack-browse",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-canary",
+      "description": "Post-deploy canary monitoring. Watches the live app for console errors, performance regressions, and page failures using the browse daemon. Takes periodic screenshots, compares against pre-deploy baselines, and alerts on anomalies. Use when: \"monitor deploy\", \"canary\", \"post-deploy check\", \"watch production\", \"verify deploy\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-canary",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-careful",
+      "description": "Safety guardrails for destructive commands. Warns before rm -rf, DROP TABLE, force-push, git reset --hard, kubectl delete, and similar destructive operations. User can override each warning. Use when touching prod, debugging live systems, or working in a shared environment. Use when asked to \"be careful\", \"safety mode\", \"prod mode\", or \"careful mode\". (gstack)",
+      "version": "0.1.0",
+      "source": "./skills/gstack-careful",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-codex",
+      "description": "OpenAI Codex CLI wrapper — three modes. Code review: independent diff review via codex review with pass/fail gate. Challenge: adversarial mode that tries to break your code. Consult: ask codex anything with session continuity for follow-ups. The \"200 IQ autistic developer\" second opinion. Use when asked to \"codex review\", \"codex challenge\", \"ask codex\", \"second opinion\", or \"consult codex\". (gstack) Voice triggers (speech-to-text aliases): \"code x\", \"code ex\", \"get another opinion\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-codex",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-context-restore",
+      "description": "Restore working context saved earlier by /context-save. Loads the most recent saved state (across all branches by default) so you can pick up where you left off — even across Conductor workspace handoffs. Use when asked to \"resume\", \"restore context\", \"where was I\", or \"pick up where I left off\". Pair with /context-save. Formerly /checkpoint resume — renamed because Claude Code treats /checkpoint as a native rewind alias in current environments. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-context-restore",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-context-save",
+      "description": "Save working context. Captures git state, decisions made, and remaining work so any future session can pick up without losing a beat. Use when asked to \"save progress\", \"save state\", \"context save\", or \"save my work\". Pair with /context-restore to resume later. Formerly /checkpoint — renamed because Claude Code treats /checkpoint as a native rewind alias in current environments, which was shadowing this skill. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-context-save",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-design-consultation",
+      "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview pages. Creates DESIGN.md as your project's design source of truth. For existing sites, use /plan-design-review to infer the system instead. Use when asked to \"design system\", \"brand guidelines\", or \"create DESIGN.md\". Proactively suggest when starting a new project's UI with no existing design system or DESIGN.md. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-design-consultation",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-design-html",
+      "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. Works with approved mockups from /design-shotgun, CEO plans from /plan-ceo-review, design review context from /plan-design-review, or from scratch with a user description. Text actually reflows, heights are computed, layouts are dynamic. 30KB overhead, zero deps. Smart API routing: picks the right Pretext patterns for each design type. Use when: \"finalize this design\", \"turn this into HTML\", \"build me a page\", \"implement this design\", or after any planning skill. Proactively suggest when user has approved a design or has a plan ready. (gstack) Voice triggers (speech-to-text aliases): \"build the design\", \"code the mockup\", \"make it real\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-design-html",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-design-shotgun",
+      "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. Standalone design exploration you can run anytime. Use when: \"explore designs\", \"show me options\", \"design variants\", \"visual brainstorm\", or \"I don't like how this looks\". Proactively suggest when the user describes a UI feature but hasn't seen what it could look like. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-design-shotgun",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-devex-review",
+      "description": "Live developer experience audit. Uses the browse tool to actually TEST the developer experience: navigates docs, tries the getting started flow, times TTHW, screenshots error messages, evaluates CLI help text. Produces a DX scorecard with evidence. Compares against /plan-devex-review scores if they exist (the boomerang: plan said 3 minutes, reality says 8). Use when asked to \"test the DX\", \"DX audit\", \"developer experience test\", or \"try the onboarding\". Proactively suggest after shipping a developer-facing feature. (gstack) Voice triggers (speech-to-text aliases): \"dx audit\", \"test the developer experience\", \"try the onboarding\", \"developer experience test\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-devex-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-document-generate",
+      "description": "Generate missing documentation from scratch for a feature, module, or entire project. Uses the Diataxis framework (tutorial / how-to / reference / explanation) to produce complete, structured documentation. Can be invoked standalone or called by /document-release when it finds coverage gaps. Use when asked to \"write docs\", \"generate documentation\", \"document this feature\", \"create a tutorial\", or \"explain this module\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-document-generate",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-document-release",
+      "description": "Post-ship documentation update. Reads all project docs, cross-references the diff, builds a Diataxis coverage map (reference/how-to/tutorial/explanation), updates README/ARCHITECTURE/CONTRIBUTING/CLAUDE.md to match what shipped, detects architecture diagram drift, polishes CHANGELOG voice with a sell-test rubric, cleans up TODOS, and optionally bumps VERSION. Surfaces documentation debt in the PR body. Use when asked to \"update the docs\", \"sync documentation\", or \"post-ship docs\". Proactively suggest after a PR is merged or code is shipped. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-document-release",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-freeze",
+      "description": "Restrict file edits to a specific directory for the session. Blocks Edit and Write outside the allowed path. Use when debugging to prevent accidentally \"fixing\" unrelated code, or when you want to scope changes to one module. Use when asked to \"freeze\", \"restrict edits\", \"only edit this folder\", or \"lock down edits\". (gstack)",
+      "version": "0.1.0",
+      "source": "./skills/gstack-freeze",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-upgrade",
+      "description": "Upgrade gstack to the latest version. Detects global vs vendored install, runs the upgrade, and shows what's new. Use when asked to \"upgrade gstack\", \"update gstack\", or \"get latest version\". Voice triggers (speech-to-text aliases): \"upgrade the tools\", \"update the tools\", \"gee stack upgrade\", \"g stack upgrade\".",
+      "version": "1.1.0",
+      "source": "./skills/gstack-upgrade",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-guard",
+      "description": "Full safety mode: destructive command warnings + directory-scoped edits. Combines /careful (warns before rm -rf, DROP TABLE, force-push, etc.) with /freeze (blocks edits outside a specified directory). Use for maximum safety when touching prod or debugging live systems. Use when asked to \"guard mode\", \"full safety\", \"lock it down\", or \"maximum safety\". (gstack)",
+      "version": "0.1.0",
+      "source": "./skills/gstack-guard",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-ios-clean",
+      "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. Cleans up StateServer, DebugOverlay, accessor codegen output, and app-side hooks installed by /ios-qa. This is a convenience wrapper — the structural Release-build guard (Package.swift conditional + CI swift build -c release check) is the safety-critical path. Use when asked to \"clean the iOS debug bridge\", \"remove DebugBridge\", or \"strip the gstack iOS instrumentation\". (gstack) Voice triggers (speech-to-text aliases): \"clean the iOS debug bridge\", \"remove DebugBridge\", \"strip the gstack iOS instrumentation\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ios-clean",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-ios-design-review",
+      "description": "Visual design audit for iOS apps on real hardware. Connects to a real iPhone via the same StateServer as /ios-qa, screenshots every screen, evaluates against Apple HIG, DESIGN.md, and design best practices. Scores each dimension 0-10 with \"what would make it a 10\" framing — mirrors /plan-design-review for browser. For plan-stage design review (before implementation), use /plan-design-review. For live web visual audits, use /design-review. Use when asked to \"review the iOS design\", \"audit the iPhone app's visuals\", or \"design QA the iOS app\". (gstack) Voice triggers (speech-to-text aliases): \"review the iOS design\", \"audit the iPhone app's visuals\", \"design QA the iPhone app\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ios-design-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-ios-fix",
+      "description": "Autonomous iOS bug fixer. Takes a bug found by /ios-qa, reads the source, writes the fix, rebuilds, redeploys, and verifies the fix on the real device. Closes the loop: find bug → fix bug → confirm fix — zero human intervention. Captures the pre-bug state snapshot as a regression test fixture, so the bug can never recur silently. Use when /ios-qa reports a bug and you want it fixed automatically, or when asked to \"fix this iOS bug\", \"patch the iPhone app\", or \"auto-fix the iOS issue\". (gstack) Voice triggers (speech-to-text aliases): \"fix the iOS bug\", \"patch the iPhone app\", \"auto-fix the iOS issue\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ios-fix",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-ios-qa",
+      "description": "Live-device iOS QA for SwiftUI apps. Connects to a real iPhone via USB CoreDevice IPv6 tunnel, reads Swift source to understand every screen, then runs a vision-driven agent loop: screenshot → analyze → decide → act → verify → repeat. All interaction happens via HTTP to an embedded StateServer in the app under test. Optionally exposes the device over Tailscale so remote agents (OpenClaw, Codex, any HTTP-capable agent) can run iOS QA from anywhere without touching the hardware. Use when asked to \"ios qa\", \"test my iPhone app\", \"find bugs on the device\", or \"qa the iOS app\". (gstack) Voice triggers (speech-to-text aliases): \"iOS quality check\", \"test the iPhone app\", \"run iOS QA\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ios-qa",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-ios-sync",
+      "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. Updates StateServer.swift, DebugOverlay.swift, Package.swift, and the typed @Observable state accessors. Use after you upgrade gstack or add new ViewModels/properties that need accessor coverage. Use when asked to \"resync the iOS debug bridge\", \"regenerate iOS accessors\", or \"update the gstack iOS instrumentation\". (gstack) Voice triggers (speech-to-text aliases): \"resync the iOS debug bridge\", \"regenerate iOS accessors\", \"update the gstack iOS instrumentation\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-ios-sync",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-land-and-deploy",
+      "description": "Land and deploy workflow. Merges the PR, waits for CI and deploy, verifies production health via canary checks. Takes over after /ship creates the PR. Use when: \"merge\", \"land\", \"deploy\", \"merge and verify\", \"land it\", \"ship it to production\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-land-and-deploy",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-landing-report",
+      "description": "Read-only queue dashboard for workspace-aware ship. Shows which VERSION slots are currently claimed by open PRs, which sibling Conductor workspaces have WIP work likely to ship soon, and what slot /ship would pick next. No mutations — just a snapshot. Use when asked to \"landing report\", \"what's in the queue\", \"show me open PRs\", or \"which version do I claim next\". (gstack)",
+      "version": "0.1.0",
+      "source": "./skills/gstack-landing-report",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-learn",
+      "description": "Manage project learnings. Review, search, prune, and export what gstack has learned across sessions. Use when asked to \"what have we learned\", \"show learnings\", \"prune stale learnings\", or \"export learnings\". Proactively suggest when the user asks about past patterns or wonders \"didn't we fix this before?\"",
+      "version": "1.0.0",
+      "source": "./skills/gstack-learn",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-make-pdf",
+      "description": "Turn any markdown file into a publication-quality PDF. Proper 1in margins, intelligent page breaks, page numbers, cover pages, running headers, curly quotes and em dashes, clickable TOC, diagonal DRAFT watermark. Not a draft artifact — a finished artifact. Use when asked to \"make a PDF\", \"export to PDF\", \"turn this markdown into a PDF\", or \"generate a document\". (gstack) Voice triggers (speech-to-text aliases): \"make this a pdf\", \"make it a pdf\", \"export to pdf\", \"turn this into a pdf\", \"turn this markdown into a pdf\", \"generate a pdf\", \"make a pdf from\", \"pdf this markdown\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-make-pdf",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-office-hours",
+      "description": "YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to \"brainstorm this\", \"I have an idea\", \"help me think through this\", \"office hours\", or \"is this worth building\". Proactively invoke this skill (do NOT answer directly) when the user describes a new product idea, asks whether something is worth building, wants to think through design decisions for something that doesn't exist yet, or is exploring a concept before any code is written. Use before /plan-ceo-review or /plan-eng-review. (gstack)",
+      "version": "2.0.0",
+      "source": "./skills/gstack-office-hours",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-open-gstack-browser",
+      "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in. Opens a visible browser window where you can watch every action in real time. The sidebar shows a live activity feed and chat. Anti-bot stealth built in. Use when asked to \"open gstack browser\", \"launch browser\", \"connect chrome\", \"open chrome\", \"real browser\", \"launch chrome\", \"side panel\", or \"control my browser\". Voice triggers (speech-to-text aliases): \"show me the browser\".",
+      "version": "0.2.0",
+      "source": "./skills/gstack-open-gstack-browser",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-pair-agent",
+      "description": "Pair a remote AI agent with your browser. One command generates a setup key and prints instructions the other agent can follow to connect. Works with OpenClaw, Hermes, Codex, Cursor, or any agent that can make HTTP requests. The remote agent gets its own tab with scoped access (read+write by default, admin on request). Use when asked to \"pair agent\", \"connect agent\", \"share browser\", \"remote browser\", \"let another agent use my browser\", or \"give browser access\". (gstack) Voice triggers (speech-to-text aliases): \"pair agent\", \"connect agent\", \"share my browser\", \"remote browser access\".",
+      "version": "0.1.0",
+      "source": "./skills/gstack-pair-agent",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-plan-ceo-review",
+      "description": "CEO/founder-mode plan review. Rethink the problem, find the 10-star product, challenge premises, expand scope when it creates a better product. Four modes: SCOPE EXPANSION (dream big), SELECTIVE EXPANSION (hold scope + cherry-pick expansions), HOLD SCOPE (maximum rigor), SCOPE REDUCTION (strip to essentials). Use when asked to \"think bigger\", \"expand scope\", \"strategy review\", \"rethink this\", or \"is this ambitious enough\". Proactively suggest when the user is questioning scope or ambition of a plan, or when the plan feels like it could be thinking bigger. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-plan-ceo-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-plan-design-review",
+      "description": "Designer's eye plan review — interactive, like CEO and Eng review. Rates each design dimension 0-10, explains what would make it a 10, then fixes the plan to get there. Works in plan mode. For live site visual audits, use /design-review. Use when asked to \"review the design plan\" or \"design critique\". Proactively suggest when the user has a plan with UI/UX components that should be reviewed before implementation. (gstack)",
+      "version": "2.0.0",
+      "source": "./skills/gstack-plan-design-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-plan-devex-review",
+      "description": "Interactive developer experience plan review. Explores developer personas, benchmarks against competitors, designs magical moments, and traces friction points before scoring. Three modes: DX EXPANSION (competitive advantage), DX POLISH (bulletproof every touchpoint), DX TRIAGE (critical gaps only). Use when asked to \"DX review\", \"developer experience audit\", \"devex review\", or \"API design review\". Proactively suggest when the user has a plan for developer-facing products (APIs, CLIs, SDKs, libraries, platforms, docs). (gstack) Voice triggers (speech-to-text aliases): \"dx review\", \"developer experience review\", \"devex review\", \"devex audit\", \"API design review\", \"onboarding review\".",
+      "version": "2.0.0",
+      "source": "./skills/gstack-plan-devex-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-plan-eng-review",
+      "description": "Eng manager-mode plan review. Lock in the execution plan — architecture, data flow, diagrams, edge cases, test coverage, performance. Walks through issues interactively with opinionated recommendations. Use when asked to \"review the architecture\", \"engineering review\", or \"lock in the plan\". Proactively suggest when the user has a plan or design doc and is about to start coding — to catch architecture issues before implementation. (gstack) Voice triggers (speech-to-text aliases): \"tech review\", \"technical review\", \"plan engineering review\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-plan-eng-review",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-plan-tune",
+      "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). Review which AskUserQuestion prompts fire across gstack skills, set per-question preferences (never-ask / always-ask / ask-only-for-one-way), inspect the dual-track profile (what you declared vs what your behavior suggests), and enable/disable question tuning. Conversational interface — no CLI syntax required.  Use when asked to \"tune questions\", \"stop asking me that\", \"too many questions\", \"show my profile\", \"what questions have I been asked\", \"show my vibe\", \"developer profile\", or \"turn off question tuning\". (gstack)  Proactively suggest when the user says the same gstack question has come up before, or when they explicitly override a recommendation for the Nth time.",
+      "version": "1.0.0",
+      "source": "./skills/gstack-plan-tune",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-qa-only",
+      "description": "Report-only QA testing. Systematically tests a web application and produces a structured report with health score, screenshots, and repro steps — but never fixes anything. Use when asked to \"just report bugs\", \"qa report only\", or \"test but don't fix\". For the full test-fix-verify loop, use /qa instead. Proactively suggest when the user wants a bug report without any code changes. (gstack) Voice triggers (speech-to-text aliases): \"bug report\", \"just check for bugs\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-qa-only",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-scrape",
+      "description": "Pull data from a web page. First call on a new intent prototypes the flow via $B primitives and returns JSON. Subsequent calls on a matching intent route to a codified browser-skill and return in ~200ms. Read-only — for mutating flows (form fills, clicks, submissions), use /automate. Use when asked to \"scrape\", \"get data from\", \"pull\", \"extract from\", or \"what's on\" a page. (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-scrape",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-setup-browser-cookies",
+      "description": "Import cookies from your real Chromium browser into the headless browse session. Opens an interactive picker UI where you select which cookie domains to import. Use before QA testing authenticated pages. Use when asked to \"import cookies\", \"login to the site\", or \"authenticate the browser\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-setup-browser-cookies",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-setup-deploy",
+      "description": "Configure deployment settings for /land-and-deploy. Detects your deploy platform (Fly.io, Render, Vercel, Netlify, Heroku, GitHub Actions, custom), production URL, health check endpoints, and deploy status commands. Writes the configuration to CLAUDE.md so all future deploys are automatic. Use when: \"setup deploy\", \"configure deployment\", \"set up land-and-deploy\", \"how do I deploy with gstack\", \"add deploy config\".",
+      "version": "1.0.0",
+      "source": "./skills/gstack-setup-deploy",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-setup-gbrain",
+      "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. One command from zero to \"gbrain is running, and this agent can call it.\" Use when: \"setup gbrain\", \"connect gbrain\", \"start gbrain\", \"install gbrain\", \"configure gbrain for this machine\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-setup-gbrain",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-skillify",
+      "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. Future /scrape calls with the same intent run the codified script in ~200ms instead of re-driving the page. Walks back through the conversation, synthesizes script.ts + script.test.ts + fixture, runs the test in a temp dir, and asks before committing. Use when asked to \"skillify\", \"codify\", \"save this scrape\", or \"make this permanent\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-skillify",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-sync-gbrain",
+      "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state probing, native code-surface registration, capability checks, and a verdict block. Re-runnable, idempotent. Use when: \"sync gbrain\", \"refresh gbrain\", \"re-index this repo\", \"gbrain search isn't finding things\". (gstack)",
+      "version": "1.0.0",
+      "source": "./skills/gstack-sync-gbrain",
+      "category": "gstack",
+      "tags": []
+    },
+    {
+      "name": "gstack-unfreeze",
+      "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. Use when you want to widen edit scope without ending the session. Use when asked to \"unfreeze\", \"unlock edits\", \"remove freeze\", or \"allow all edits\". (gstack)",
+      "version": "0.1.0",
+      "source": "./skills/gstack-unfreeze",
+      "category": "gstack",
+      "tags": []
     }
   ]
 }

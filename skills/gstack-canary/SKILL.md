@@ -1,0 +1,1 @@
+../../vendor/gstack/canary/SKILL.md

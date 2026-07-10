@@ -1,0 +1,1 @@
+../../vendor/gstack/design-consultation/SKILL.md

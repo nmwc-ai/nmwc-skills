@@ -1,0 +1,1 @@
+../../vendor/gstack/scrape/SKILL.md

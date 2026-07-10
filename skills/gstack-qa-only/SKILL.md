@@ -1,0 +1,1 @@
+../../vendor/gstack/qa-only/SKILL.md

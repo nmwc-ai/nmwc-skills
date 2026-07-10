@@ -1,0 +1,1 @@
+../../vendor/gstack/devex-review/SKILL.md

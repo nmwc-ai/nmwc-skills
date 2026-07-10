@@ -1,0 +1,1 @@
+../../vendor/gstack/skillify/SKILL.md
