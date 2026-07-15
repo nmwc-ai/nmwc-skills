@@ -1,0 +1,5 @@
+{
+  "name": "nmwc-prd",
+  "description": "NMWC 팀 공통 규격의 PRD를 작성한다. Background·Goal·Hypothesis·Principles·Scope에 더해 핵심인 Epic → User Story(US-x.y) → 인수 조건(AC)을 상세히 만들고, 공유용 렌더 HTML 뷰까지 생성한다. \"PRD 써줘\", \"제품 요구사항 문서\", \"기획서 작성\", \"에픽/유저 스토리/인수 조건 정리\" 요청 시 사용.",
+  "version": "1.0.0"
+}
