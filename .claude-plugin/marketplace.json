@@ -457,7 +457,8 @@
       "tags": [
         "requirements",
         "discovery"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "writing-plans",
@@ -468,7 +469,8 @@
       "tags": [
         "spec",
         "planning"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "executing-plans",
@@ -478,7 +480,8 @@
       "category": "planning",
       "tags": [
         "implementation"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "verification-before-completion",
@@ -489,7 +492,8 @@
       "tags": [
         "verification",
         "quality"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "systematic-debugging",
@@ -499,7 +503,8 @@
       "category": "debugging",
       "tags": [
         "root-cause"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "using-superpowers",
@@ -509,7 +514,8 @@
       "category": "meta",
       "tags": [
         "skill-discovery"
-      ]
+      ],
+      "homepage": "https://github.com/obra/superpowers"
     },
     {
       "name": "humanizer",
@@ -520,7 +526,8 @@
       "tags": [
         "tone",
         "editing"
-      ]
+      ],
+      "homepage": "https://github.com/blader/humanizer"
     },
     {
       "name": "ponytail",
@@ -531,7 +538,8 @@
       "tags": [
         "yagni",
         "simplicity"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "ponytail-audit",
@@ -541,7 +549,8 @@
       "category": "productivity",
       "tags": [
         "audit"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "ponytail-debt",
@@ -551,7 +560,8 @@
       "category": "productivity",
       "tags": [
         "tech-debt"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "ponytail-gain",
@@ -561,7 +571,8 @@
       "category": "productivity",
       "tags": [
         "metrics"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "ponytail-help",
@@ -571,7 +582,8 @@
       "category": "productivity",
       "tags": [
         "help"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "ponytail-review",
@@ -581,7 +593,8 @@
       "category": "productivity",
       "tags": [
         "code-review"
-      ]
+      ],
+      "homepage": "https://github.com/DietrichGebert/ponytail"
     },
     {
       "name": "skill-creator",
@@ -591,7 +604,8 @@
       "category": "meta",
       "tags": [
         "skill-authoring"
-      ]
+      ],
+      "homepage": "https://github.com/anthropics/skills/tree/main/skills/skill-creator"
     },
     {
       "name": "frontend-design",
@@ -602,7 +616,8 @@
       "tags": [
         "frontend",
         "aesthetic"
-      ]
+      ],
+      "homepage": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
     },
     {
       "name": "canvas-design",
@@ -613,7 +628,8 @@
       "tags": [
         "poster",
         "graphics"
-      ]
+      ],
+      "homepage": "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
     },
     {
       "name": "brand-guidelines",
@@ -623,7 +639,8 @@
       "category": "design",
       "tags": [
         "brand"
-      ]
+      ],
+      "homepage": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
     },
     {
       "name": "obsidian-defuddle",
@@ -634,7 +651,8 @@
       "tags": [
         "obsidian",
         "clipping"
-      ]
+      ],
+      "homepage": "https://github.com/kepano/obsidian-skills"
     },
     {
       "name": "obsidian-markdown",
@@ -645,7 +663,8 @@
       "tags": [
         "obsidian",
         "markdown"
-      ]
+      ],
+      "homepage": "https://github.com/kepano/obsidian-skills"
     },
     {
       "name": "obsidian-bases",
@@ -656,7 +675,8 @@
       "tags": [
         "obsidian",
         "database"
-      ]
+      ],
+      "homepage": "https://github.com/kepano/obsidian-skills"
     },
     {
       "name": "obsidian-cli",
@@ -667,7 +687,8 @@
       "tags": [
         "obsidian",
         "cli"
-      ]
+      ],
+      "homepage": "https://github.com/kepano/obsidian-skills"
     },
     {
       "name": "obsidian-json-canvas",
@@ -678,7 +699,8 @@
       "tags": [
         "obsidian",
         "canvas"
-      ]
+      ],
+      "homepage": "https://github.com/kepano/obsidian-skills"
     },
     {
       "name": "ui-ux-pro-max",
@@ -689,7 +711,8 @@
       "tags": [
         "design-system",
         "palettes"
-      ]
+      ],
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
     },
     {
       "name": "claude-seo",
@@ -700,7 +723,8 @@
       "tags": [
         "seo",
         "audit"
-      ]
+      ],
+      "homepage": "https://github.com/AgriciDaniel/claude-seo"
     }
   ]
 }
