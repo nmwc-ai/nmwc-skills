@@ -447,6 +447,260 @@
       "source": "./skills/gstack-unfreeze",
       "category": "security",
       "tags": []
+    },
+    {
+      "name": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "version": "1.0.0",
+      "source": "./skills/brainstorming",
+      "category": "planning",
+      "tags": [
+        "requirements",
+        "discovery"
+      ]
+    },
+    {
+      "name": "writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "version": "1.0.0",
+      "source": "./skills/writing-plans",
+      "category": "planning",
+      "tags": [
+        "spec",
+        "planning"
+      ]
+    },
+    {
+      "name": "executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "version": "1.0.0",
+      "source": "./skills/executing-plans",
+      "category": "planning",
+      "tags": [
+        "implementation"
+      ]
+    },
+    {
+      "name": "verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+      "version": "1.0.0",
+      "source": "./skills/verification-before-completion",
+      "category": "meta",
+      "tags": [
+        "verification",
+        "quality"
+      ]
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "version": "1.0.0",
+      "source": "./skills/systematic-debugging",
+      "category": "debugging",
+      "tags": [
+        "root-cause"
+      ]
+    },
+    {
+      "name": "using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+      "version": "1.0.0",
+      "source": "./skills/using-superpowers",
+      "category": "meta",
+      "tags": [
+        "skill-discovery"
+      ]
+    },
+    {
+      "name": "humanizer",
+      "description": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including: inflated symbolism, promotional language, superficial -ing analyses, vague attributions, em dash overuse, rule of three, AI vocabulary words, passive voice, negative parallelisms, and filler phrases.",
+      "version": "1.0.0",
+      "source": "./skills/humanizer",
+      "category": "writing",
+      "tags": [
+        "tone",
+        "editing"
+      ]
+    },
+    {
+      "name": "ponytail",
+      "description": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Supports intensity levels: lite, full (default), ultra. Use whenever the user says \"ponytail\", \"be lazy\", \"lazy mode\", \"simplest solution\", \"minimal solution\", \"yagni\", \"do less\", or \"shortest path\", and whenever they complain about over-engineering, bloat, boilerplate, or unnecessary dependencies.",
+      "version": "1.0.0",
+      "source": "./skills/ponytail",
+      "category": "productivity",
+      "tags": [
+        "yagni",
+        "simplicity"
+      ]
+    },
+    {
+      "name": "ponytail-audit",
+      "description": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says \"audit this codebase\", \"audit for over-engineering\", \"what can I delete from this repo\", \"find bloat\", \"ponytail-audit\", or \"/ponytail-audit\". One-shot report, does not apply fixes.",
+      "version": "1.0.0",
+      "source": "./skills/ponytail-audit",
+      "category": "productivity",
+      "tags": [
+        "audit"
+      ]
+    },
+    {
+      "name": "ponytail-debt",
+      "description": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into \"later means never\". Use when the user says \"ponytail debt\", \"/ponytail-debt\", \"what did ponytail defer\", \"list the shortcuts\", \"ponytail ledger\", or \"what did we mark to do later\". One-shot report, changes nothing.",
+      "version": "1.0.0",
+      "source": "./skills/ponytail-debt",
+      "category": "productivity",
+      "tags": [
+        "tech-debt"
+      ]
+    },
+    {
+      "name": "ponytail-gain",
+      "description": "Show ponytail's measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, \"ponytail gain\", \"what does ponytail save\", \"show ponytail impact\", \"ponytail scoreboard\".",
+      "version": "1.0.0",
+      "source": "./skills/ponytail-gain",
+      "category": "productivity",
+      "tags": [
+        "metrics"
+      ]
+    },
+    {
+      "name": "ponytail-help",
+      "description": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, \"ponytail help\", \"what ponytail commands\", \"how do I use ponytail\".",
+      "version": "1.0.0",
+      "source": "./skills/ponytail-help",
+      "category": "productivity",
+      "tags": [
+        "help"
+      ]
+    },
+    {
+      "name": "ponytail-review",
+      "description": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use when the user says \"review for over-engineering\", \"what can we delete\", \"is this over-engineered\", \"simplify review\", or invokes /ponytail-review. Complements correctness-focused review, this one only hunts complexity.",
+      "version": "1.0.0",
+      "source": "./skills/ponytail-review",
+      "category": "productivity",
+      "tags": [
+        "code-review"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "version": "1.0.0",
+      "source": "./skills/skill-creator",
+      "category": "meta",
+      "tags": [
+        "skill-authoring"
+      ]
+    },
+    {
+      "name": "frontend-design",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+      "version": "1.0.0",
+      "source": "./skills/frontend-design",
+      "category": "design",
+      "tags": [
+        "frontend",
+        "aesthetic"
+      ]
+    },
+    {
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "version": "1.0.0",
+      "source": "./skills/canvas-design",
+      "category": "design",
+      "tags": [
+        "poster",
+        "graphics"
+      ]
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "version": "1.0.0",
+      "source": "./skills/brand-guidelines",
+      "category": "design",
+      "tags": [
+        "brand"
+      ]
+    },
+    {
+      "name": "obsidian-defuddle",
+      "description": "Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly.",
+      "version": "1.0.0",
+      "source": "./skills/obsidian-defuddle",
+      "category": "docs",
+      "tags": [
+        "obsidian",
+        "clipping"
+      ]
+    },
+    {
+      "name": "obsidian-markdown",
+      "description": "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.",
+      "version": "1.0.0",
+      "source": "./skills/obsidian-markdown",
+      "category": "docs",
+      "tags": [
+        "obsidian",
+        "markdown"
+      ]
+    },
+    {
+      "name": "obsidian-bases",
+      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.",
+      "version": "1.0.0",
+      "source": "./skills/obsidian-bases",
+      "category": "docs",
+      "tags": [
+        "obsidian",
+        "database"
+      ]
+    },
+    {
+      "name": "obsidian-cli",
+      "description": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.",
+      "version": "1.0.0",
+      "source": "./skills/obsidian-cli",
+      "category": "docs",
+      "tags": [
+        "obsidian",
+        "cli"
+      ]
+    },
+    {
+      "name": "obsidian-json-canvas",
+      "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+      "version": "1.0.0",
+      "source": "./skills/obsidian-json-canvas",
+      "category": "docs",
+      "tags": [
+        "obsidian",
+        "canvas"
+      ]
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "description": "UI/UX design intelligence. 67 styles, 161 palettes, 57 font pairings, 25 charts, 21 stacks (React, Next.js, Vue, Svelte, Astro, SwiftUI, React Native, Flutter, WPF, WinUI 3, UWP, Avalonia, Uno Platform, Nuxt, Nuxt UI, Tailwind, shadcn/ui, Jetpack Compose, Three.js, Angular, Laravel). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, desktop app, .html, .tsx, .vue, .svelte, .xaml. Elements: button, modal, navbar, sidebar, card, table, form, chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, flat design. Topics: color palette, accessibility, animation, layout, typography, font pairing, spacing, hover, shadow, gradient. Integrations: shadcn/ui MCP for component search and examples.",
+      "version": "1.0.0",
+      "source": "./skills/ui-ux-pro-max",
+      "category": "design",
+      "tags": [
+        "design-system",
+        "palettes"
+      ]
+    },
+    {
+      "name": "claude-seo",
+      "description": "Comprehensive SEO analysis for any website or business type. Full site audits, single-page analysis, technical SEO (crawlability, indexability, Core Web Vitals with INP), schema markup, content quality (E-E-A-T), image optimization, sitemap analysis, and GEO for AI Overviews/ChatGPT/Perplexity. Industry detection for SaaS, e-commerce, local, publishers, agencies. Triggers on: SEO, audit, schema, Core Web Vitals, sitemap, E-E-A-T, AI Overviews, GEO, technical SEO, content quality, page speed, structured data.",
+      "version": "2.2.0",
+      "source": "./skills/claude-seo",
+      "category": "seo",
+      "tags": [
+        "seo",
+        "audit"
+      ]
     }
   ]
 }

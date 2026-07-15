@@ -1,0 +1,1 @@
+../../vendor/claude-seo/skills/seo/SKILL.md

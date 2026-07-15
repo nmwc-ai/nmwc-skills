@@ -1,0 +1,1 @@
+../../vendor/ui-ux-pro-max/SKILL.md
