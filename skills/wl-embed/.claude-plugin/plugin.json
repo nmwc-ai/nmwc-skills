@@ -1,0 +1,6 @@
+{
+  "name": "wl-embed",
+  "description": "gbrain 임베딩 인프라를 수동 유지보수한다. preflight 8실패모드 검진 → sync(import+embed) → 커버리지/quota 리포트. gbrain CLI 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "wl-note",
+  "description": "오늘 Daily 일지의 오프라인 활동 섹션에 비-git 활동(회의·외부 도구 작업·휴식·결정)을 보충한다. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

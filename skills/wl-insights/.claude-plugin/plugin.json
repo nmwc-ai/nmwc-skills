@@ -1,0 +1,6 @@
+{
+  "name": "wl-insights",
+  "description": "최근 30일(또는 지정 기간) Daily를 전수 분석해 크로스커팅 패턴 5가지를 추출하고 Concept 후보·미연결 쌍을 제안한다. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

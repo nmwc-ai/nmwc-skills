@@ -1,0 +1,6 @@
+{
+  "name": "wl-backfill",
+  "description": "누락된 날짜의 Daily 일지를 git 로그 기반으로 백필한다. 커밋이 있으면 정상 일지, 없으면 정직한 최소 placeholder를 생성한다. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

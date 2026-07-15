@@ -1,0 +1,6 @@
+{
+  "name": "wl-week",
+  "description": "이번 주(또는 지정한 ISO week) Daily를 모아 주간 회고 노트(shipping streak·프로젝트별 활동·다음 주 포커스·도구별 사용)를 작성한다. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

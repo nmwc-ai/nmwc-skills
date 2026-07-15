@@ -1,0 +1,6 @@
+{
+  "name": "wl-concept",
+  "description": "worklog 볼트 Concepts/ 의 Karpathy식 개념 노트를 생성·갱신한다. 근거 백링크·관련 개념 양방향 위브·sources 카운터 동기화를 관리한다. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

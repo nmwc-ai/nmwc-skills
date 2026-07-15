@@ -1,0 +1,6 @@
+{
+  "name": "wl-setup",
+  "description": "worklog 시스템을 부트스트랩하고 진단·복구한다. 볼트 구조·쓰기 스킬 배선·푸시 훅·gbrain·wl-* 커맨드 패밀리를 점검하고 빠진 조각을 설치한다. 새 머신 최초 설치 시 가장 먼저 설치할 스킬.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

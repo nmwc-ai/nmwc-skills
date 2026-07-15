@@ -1,0 +1,69 @@
+# repo-registry.md
+
+git 레포명 → Obsidian `[[Projects/]]` 링크 매핑.
+`collect-git.sh` 결과를 일지에 붙일 때 참조.
+
+| repo (basename) | Obsidian 링크 | 회사 |
+|-----------------|---------------|------|
+| antiegg-backoffice | [[Projects/antiegg-backoffice]] | ANTIEGG |
+| editor-in-chief | [[Projects/editor-in-chief]] | ANTIEGG |
+| antiegg-newsletter | [[Projects/antiegg-newsletter]] | ANTIEGG |
+| antiegg-server-agent | [[Projects/antiegg-server-agent]] | ANTIEGG |
+| antiegg-instagram | [[Projects/antiegg-instagram]] | ANTIEGG |
+| antiegg-graphics-automation | [[Projects/antiegg-graphics-automation]] | ANTIEGG |
+| egg-bot | [[Projects/egg-bot]] | ANTIEGG |
+| ghost-to-wp | [[Projects/ghost-to-wp]] | ANTIEGG |
+| antiegg-ai-agent | [[Projects/antiegg-paperclip-ops]] | NMWC |
+| nmwc-ai-workspace | [[Projects/nmwc-workspace]] | NMWC |
+| tax-saas-poc | [[Projects/tax-saas-poc]] | NMWC |
+| paperclip | [[Projects/antiegg-paperclip-ops]] | NMWC |
+| nmwc-brand-system | [[Projects/nmwc-brand-system]] | NMWC |
+| buildfeed | [[Projects/buildfeed]] | NMWC |
+| spacebase-renewal | [[Projects/spacebase-renewal]] | NMWC |
+| spacebase-clone | [[Projects/spacebase-clone]] | NMWC |
+| windly-clone | [[Projects/windly-clone]] | NMWC |
+| saas-bundle-platform | [[Projects/saas-bundle-platform]] | NMWC |
+| oh-my-hwclaude | [[Projects/global-claude-harness]] | HYUNGWOON |
+| business-ai-team | [[Projects/business-ai-team]] | HYUNGWOON |
+| business-ai-web | [[Projects/business-ai-web]] | HYUNGWOON |
+| hyungwoon_portfolio | [[Projects/hyungwoon-portfolio]] | HYUNGWOON |
+| architect-ai-team | [[Projects/architect-ai-team]] | HYUNGWOON |
+| hw-browser | [[Projects/hw-browser]] | HYUNGWOON |
+| internal-sign | [[Projects/internal-sign]] | HYUNGWOON |
+| job-alert-agent | [[Projects/job-alert-agent]] | HYUNGWOON |
+| household-budget | [[Projects/household-budget]] | HYUNGWOON |
+| gstack | [[Projects/gstack]] | HYUNGWOON |
+| hongsi | [[Projects/hongsi]] | HYUNGWOON |
+| searchright-trial | [[Projects/searchright-trial]] | SEARCHRIGHT |
+| searchright-ceo-staff | [[Projects/searchright-ceo-staff]] | SEARCHRIGHT |
+| searchright-kg | [[Projects/searchright-kg]] | SEARCHRIGHT |
+| jd-creator | [[Projects/jd-creator]] | SEARCHRIGHT |
+| searchright-jd-sourcer | [[Projects/searchright-jd-sourcer]] | SEARCHRIGHT |
+| searchright-ai-recruiter-demo | [[Projects/searchright-ai-recruiter-demo]] | SEARCHRIGHT |
+| searchright-distributor | [[Projects/searchright-distributor]] | SEARCHRIGHT |
+| searchright-hero-video | [[Projects/searchright-hero-video]] | SEARCHRIGHT |
+| aidra-kb-harness | [[Projects/ai-drama-ax]] | SUPERCENT |
+| aidra-studio | [[Projects/aidra-studio]] | SUPERCENT |
+| antiegg-newsletter-admin | [[Projects/antiegg-newsletter-admin]] | ANTIEGG |
+| antiegg-instagram-work | [[Projects/antiegg-instagram-work]] | ANTIEGG |
+| antiegg_meeting | [[Projects/meeting-vote]] | ANTIEGG |
+| analytics-to-slack | [[Projects/analytics-to-slack]] | ANTIEGG |
+| email-to-slack | [[Projects/email-to-slack]] | ANTIEGG |
+| antiegg-shortform-tempates | [[Projects/antiegg-shortform-tempates]] | ANTIEGG |
+| nmwc-weekly-sync | [[Projects/nmwc-weekly-sync]] | NMWC |
+| ai-coding-deck | [[Projects/ai-coding-deck]] | HYUNGWOON |
+| ai-dev-setup | [[Projects/ai-dev-setup]] | HYUNGWOON |
+| pixel-agents | [[Projects/pixel-agents]] | HYUNGWOON |
+| portfolio-writer | [[Projects/portfolio-writer]] | HYUNGWOON |
+| seo-geo-agent | [[Projects/seo-geo-agent]] | HYUNGWOON |
+| video-editing-agent | [[Projects/video-editing-agent]] | HYUNGWOON |
+| video-editing-team | [[Projects/video-editing-team]] | HYUNGWOON |
+| slack-hyungwoon-bot | [[Projects/slack-hyungwoon-bot]] | HYUNGWOON |
+| internal-sign-brainstorm | [[Projects/internal-sign-brainstorm]] | HYUNGWOON |
+| trip-report-agent | [[Projects/trip-report-agent]] | HYUNGWOON |
+| clawd-on-desk | [[Projects/clawd-on-desk]] | HYUNGWOON |
+| figma-to-psd | [[Projects/figma-to-psd]] | HYUNGWOON |
+| state-of-ai-design-deck | [[Projects/state-of-ai-design-deck]] | HYUNGWOON |
+| slide-agent | [[Projects/slide-agent]] | HYUNGWOON |
+| luffy | [[Projects/luffy]] | SEARCHRIGHT |
+| orca | [[Projects/orca]] | HYUNGWOON |

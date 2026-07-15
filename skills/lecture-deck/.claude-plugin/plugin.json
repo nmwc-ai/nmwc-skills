@@ -1,0 +1,6 @@
+{
+  "name": "lecture-deck",
+  "description": "스크롤형 강의·발표 슬라이드 덱을 만드는 스킬. 다크 OKLCH 그레이스케일 + Geist + scroll-snap 풀스크린 섹션 + reveal 애니메이션의 일관된 디자인 언어로 렉쳐 덱을 생성한다. 두 가지 모드 — (A) Next.js route 스캐폴드, (B) 단일 self-contained HTML. \"렉쳐 덱\", \"강의 덱\", \"슬라이드 덱\", \"발표 덱\", \"스크롤 덱\" 요청 시 사용.",
+  "version": "1.0.0",
+  "category": "design"
+}

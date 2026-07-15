@@ -1,0 +1,6 @@
+{
+  "name": "worklog",
+  "description": "업무일지(Worklog) 작성 스킬. 오늘의 git 커밋을 수집해 Obsidian 볼트(~/Documents/Worklog/)에 Daily 항목을 생성한다. \"worklog 써\", \"오늘 일지\", \"worklog 작성\" 요청 시 사용. wl-* 커맨드 패밀리(wl-ask/wl-week/wl-lint 등)의 기반 스킬 — 함께 설치 권장.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

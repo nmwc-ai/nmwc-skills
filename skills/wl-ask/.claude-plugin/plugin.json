@@ -1,0 +1,6 @@
+{
+  "name": "wl-ask",
+  "description": "worklog 볼트에 과거 작업·결정·회사 간 맥락을 gbrain 의미검색으로 질의하고 출처를 위키링크로 인용해 답한다. 세션 종료 자동 파일링(opt-out) 겸용. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}

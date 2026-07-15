@@ -725,6 +725,140 @@
         "audit"
       ],
       "homepage": "https://github.com/AgriciDaniel/claude-seo"
+    },
+    {
+      "name": "lecture-deck",
+      "description": "스크롤형 강의·발표 슬라이드 덱을 만드는 스킬. 다크 OKLCH 그레이스케일 + Geist + scroll-snap 풀스크린 섹션 + reveal 애니메이션의 일관된 디자인 언어로 렉쳐 덱을 생성한다. 두 가지 모드 — (A) Next.js route 스캐폴드, (B) 단일 self-contained HTML. \"렉쳐 덱\", \"강의 덱\", \"슬라이드 덱\", \"발표 덱\", \"스크롤 덱\" 요청 시 사용.",
+      "version": "1.0.0",
+      "source": "./skills/lecture-deck",
+      "category": "design",
+      "tags": [
+        "deck",
+        "slides",
+        "presentation"
+      ]
+    },
+    {
+      "name": "worklog",
+      "description": "업무일지(Worklog) 작성 스킬. 오늘의 git 커밋을 수집해 Obsidian 볼트(~/Documents/Worklog/)에 Daily 항목을 생성한다. \"worklog 써\", \"오늘 일지\", \"worklog 작성\" 요청 시 사용. wl-* 커맨드 패밀리(wl-ask/wl-week/wl-lint 등)의 기반 스킬 — 함께 설치 권장.",
+      "version": "1.0.0",
+      "source": "./skills/worklog",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "obsidian",
+        "git"
+      ]
+    },
+    {
+      "name": "wl-ask",
+      "description": "worklog 볼트에 과거 작업·결정·회사 간 맥락을 gbrain 의미검색으로 질의하고 출처를 위키링크로 인용해 답한다. 세션 종료 자동 파일링(opt-out) 겸용. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-ask",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "gbrain"
+      ]
+    },
+    {
+      "name": "wl-audio",
+      "description": "음성 파일을 받아써(STT) 오늘 Daily의 오프라인 활동에 반영한다. git에 안 잡히는 비-git 작업을 음성으로 수집하는 보완 경로. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-audio",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "stt",
+        "audio"
+      ]
+    },
+    {
+      "name": "wl-backfill",
+      "description": "누락된 날짜의 Daily 일지를 git 로그 기반으로 백필한다. 커밋이 있으면 정상 일지, 없으면 정직한 최소 placeholder를 생성한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-backfill",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "backfill"
+      ]
+    },
+    {
+      "name": "wl-concept",
+      "description": "worklog 볼트 Concepts/ 의 Karpathy식 개념 노트를 생성·갱신한다. 근거 백링크·관련 개념 양방향 위브·sources 카운터 동기화를 관리한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-concept",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "knowledge-base"
+      ]
+    },
+    {
+      "name": "wl-embed",
+      "description": "gbrain 임베딩 인프라를 수동 유지보수한다. preflight 8실패모드 검진 → sync(import+embed) → 커버리지/quota 리포트. gbrain CLI 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-embed",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "gbrain"
+      ]
+    },
+    {
+      "name": "wl-insights",
+      "description": "최근 30일(또는 지정 기간) Daily를 전수 분석해 크로스커팅 패턴 5가지를 추출하고 Concept 후보·미연결 쌍을 제안한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-insights",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "knowledge-base"
+      ]
+    },
+    {
+      "name": "wl-lint",
+      "description": "worklog 볼트 건강도를 점검한다. 깨진 링크·frontmatter·고아 Daily·Concept drift 등 a~j 10개 항목 검사 후 점수와 자동 수정 후보를 보고한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-lint",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "lint"
+      ]
+    },
+    {
+      "name": "wl-note",
+      "description": "오늘 Daily 일지의 오프라인 활동 섹션에 비-git 활동(회의·외부 도구 작업·휴식·결정)을 보충한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-note",
+      "category": "productivity",
+      "tags": [
+        "worklog"
+      ]
+    },
+    {
+      "name": "wl-setup",
+      "description": "worklog 시스템을 부트스트랩하고 진단·복구한다. 볼트 구조·쓰기 스킬 배선·푸시 훅·gbrain·wl-* 커맨드 패밀리를 점검하고 빠진 조각을 설치한다. 새 머신 최초 설치 시 가장 먼저 설치할 스킬.",
+      "version": "1.0.0",
+      "source": "./skills/wl-setup",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "setup"
+      ]
+    },
+    {
+      "name": "wl-week",
+      "description": "이번 주(또는 지정한 ISO week) Daily를 모아 주간 회고 노트(shipping streak·프로젝트별 활동·다음 주 포커스·도구별 사용)를 작성한다. worklog 스킬과 함께 설치 필요.",
+      "version": "1.0.0",
+      "source": "./skills/wl-week",
+      "category": "productivity",
+      "tags": [
+        "worklog",
+        "retro"
+      ]
     }
   ]
 }

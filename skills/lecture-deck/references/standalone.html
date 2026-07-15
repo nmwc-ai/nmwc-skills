@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>강의 덱 제목</title>
+<style>
+  :root{
+    --background:oklch(0.145 0 0); --foreground:oklch(0.985 0 0);
+    --card:oklch(0.205 0 0); --muted:oklch(0.269 0 0);
+    --muted-foreground:oklch(0.708 0 0); --primary:oklch(0.922 0 0);
+    --border:oklch(1 0 0 / 10%); --radius:0.625rem;
+    --sans:"Geist",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  /* fill the viewport: root scale up so rem-based type/spacing/wrap all grow together.
+     bump higher (e.g. 130%) if content still reads small on the presentation display. */
+  html{height:100%;font-size:125%}
+  @media(max-width:1100px){html{font-size:108%}}
+  @media(max-width:720px){html{font-size:100%}}
+  body{height:100%;background:var(--background);color:var(--foreground);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .deck{height:100vh;overflow-y:auto;scroll-snap-type:y mandatory}
+  section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;padding:4.5rem 3.5rem}
+  section:nth-child(even){background:color-mix(in oklch,var(--muted) 20%,transparent)}
+  .wrap{width:100%;max-width:74rem;margin:0 auto}
+  .center{text-align:center}
+  .eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted-foreground);margin-bottom:.75rem}
+  h1{font-size:clamp(2.5rem,7vw,4.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+  h1 .dim{color:var(--muted-foreground)}
+  h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.6rem}
+  .sub{font-size:1rem;color:var(--muted-foreground);max-width:42rem}
+  section.center .sub{margin-left:auto;margin-right:auto;margin-top:1.5rem;font-size:1.125rem}
+  .lead{color:var(--muted-foreground);margin-bottom:3.2rem;font-size:1.1rem}
+  .grid{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:3rem}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  .card{border:1px solid var(--border);background:color-mix(in oklch,var(--card) 80%,transparent);border-radius:1rem;padding:1.8rem 1.9rem;display:flex;gap:1.1rem;align-items:flex-start;backdrop-filter:blur(4px);box-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .card.full{grid-column:1/-1}
+  .num{font-family:var(--mono);font-size:.875rem;color:var(--primary);flex-shrink:0;margin-top:.1rem}
+  .card .title{font-size:1rem;font-weight:600;margin-bottom:.3rem}
+  .card .desc{font-size:.95rem;color:var(--muted-foreground);line-height:1.65}
+  .scroll{margin-top:4rem;color:color-mix(in oklch,var(--muted-foreground) 40%,transparent);font-size:.75rem}
+  .scroll .arrow{display:inline-block;font-size:1.125rem;margin-top:.5rem;animation:bounce 1s infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(1.5rem);transition:opacity .7s ease-out,transform .7s ease-out}
+  section.on .reveal{opacity:1;transform:none}
+  /* dot nav */
+  nav{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);z-index:50;display:none;flex-direction:column;gap:.25rem;align-items:center}
+  @media(min-width:640px){nav{display:flex}}
+  nav button{background:none;border:none;padding:.25rem;cursor:pointer}
+  nav .dot{display:block;width:8px;height:8px;border-radius:9999px;background:color-mix(in oklch,var(--muted-foreground) 30%,transparent);transition:all .3s}
+  nav button.active .dot{width:10px;height:10px;background:var(--primary);box-shadow:0 0 8px rgba(255,255,255,.3)}
+</style>
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="deck" id="deck">
+
+  <!-- 00 타이틀 -->
+  <section class="center" data-label="Title">
+    <div class="wrap">
+      <p class="eyebrow reveal">Lecture · 2026</p>
+      <h1 class="reveal">강의 덱 제목<br /><span class="dim">부제 강조 줄</span></h1>
+      <p class="sub reveal">한두 문장으로 이 덱이 무엇인지 — 처음 접하는 사람도 읽을 수 있게.</p>
+      <div class="scroll reveal">SCROLL<br /><span class="arrow">↓</span></div>
+    </div>
+  </section>
+
+  <!-- 01 콘텐츠 슬라이드 (복제해서 사용) -->
+  <section data-label="첫 슬라이드">
+    <div class="wrap">
+      <p class="eyebrow reveal">Part 1 · Section</p>
+      <h2 class="reveal">슬라이드 제목 — 결론 먼저</h2>
+      <p class="lead reveal">부제 한 줄로 맥락을 준다</p>
+      <div class="grid reveal">
+        <div class="card"><span class="num">01</span><div><p class="title">핵심 포인트</p><p class="desc">짧고 단정적인 설명.</p></div></div>
+        <div class="card"><span class="num">02</span><div><p class="title">두 번째</p><p class="desc">회색 본문으로 근거를 편다.</p></div></div>
+        <div class="card full"><span class="num">03</span><div><p class="title">풀폭 항목</p><p class="desc">full 클래스로 두 열을 차지.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+  const deck=document.getElementById('deck');
+  const secs=[...deck.querySelectorAll('section')];
+  const nav=document.getElementById('nav');
+  secs.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.setAttribute('aria-label','Go to '+(s.dataset.label||i));
+    b.innerHTML='<span class="dot"></span>';
+    b.onclick=()=>s.scrollIntoView({behavior:'smooth'});
+    nav.appendChild(b);
+  });
+  const dots=[...nav.children];
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('on');
+        const i=secs.indexOf(e.target);
+        dots.forEach((d,j)=>d.classList.toggle('active',j===i));
+      }
+    });
+  },{root:deck,threshold:0.1});
+  secs.forEach(s=>io.observe(s));
+  addEventListener('keydown',(e)=>{
+    const cur=Math.max(0,dots.findIndex(d=>d.classList.contains('active')));
+    if(e.key==='ArrowDown'||e.key===' '){e.preventDefault();secs[Math.min(cur+1,secs.length-1)]?.scrollIntoView({behavior:'smooth'});}
+    else if(e.key==='ArrowUp'){e.preventDefault();secs[Math.max(cur-1,0)]?.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>

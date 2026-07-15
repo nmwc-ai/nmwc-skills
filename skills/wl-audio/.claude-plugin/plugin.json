@@ -1,0 +1,6 @@
+{
+  "name": "wl-audio",
+  "description": "음성 파일을 받아써(STT) 오늘 Daily의 오프라인 활동에 반영한다. git에 안 잡히는 비-git 작업을 음성으로 수집하는 보완 경로. worklog 스킬과 함께 설치 필요.",
+  "version": "1.0.0",
+  "category": "productivity"
+}
