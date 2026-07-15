@@ -1,0 +1,5 @@
+{
+  "name": "nmwc-spec",
+  "description": "NMWC 스펙 주도 개발 규격으로 기능 스펙 문서를 작성한다. `.specs/` 폴더에 기능 단위로 spec.md(설계)+PROGRESS.md(진행)를 만들고 INDEX.md를 갱신한다. spec.md에는 개요·데이터 모델·화면 구성·기술 구현을 상세히 담는다. \"스펙 써줘\", \"spec 문서\", \"기능 설계 문서\", \".specs\", \"스펙 주도 개발\" 요청 시 사용.",
+  "version": "1.0.0"
+}

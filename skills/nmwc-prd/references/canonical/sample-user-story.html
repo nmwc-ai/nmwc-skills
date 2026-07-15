@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Story 샘플 (템플릿 예시)</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #656d76; --faint: #8b949e;
+    --line: #e6e8eb; --card: #f8f9fa; --accent: #2563eb; --accent-soft: #eff4ff;
+    --quote-bg: #f0f6ff; --quote-bar: #2563eb; --check: #c9ced4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216; --fg: #e6e9ec; --muted: #9aa4ae; --faint: #6e7a86;
+      --line: #262c33; --card: #171c22; --accent: #6ea8fe; --accent-soft: #16233c;
+      --quote-bg: #14202f; --quote-bar: #6ea8fe; --check: #3a434d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font-family: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    font-size: 16px; line-height: 1.75; word-break: keep-all; overflow-wrap: break-word;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 28px 96px; }
+
+  header.doc h1 { font-size: 34px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .doc-sub { color: var(--muted); margin: 0 0 20px; font-size: 15px; }
+  .stats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+  .stat { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 4px 14px; font-size: 13px; font-weight: 600; }
+
+  nav.toc { border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 48px; }
+  nav.toc > p { margin: 0 0 12px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); }
+  .toc-epic { margin-bottom: 12px; }
+  .toc-epic:last-child { margin-bottom: 0; }
+  .toc-epic-title { font-weight: 700; color: var(--fg); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+  .toc-epic-title:hover { color: var(--accent); }
+  .toc-epic ul { list-style: none; margin: 6px 0 0; padding: 0 0 0 30px; display: grid; gap: 3px; }
+  .toc-epic a { color: var(--muted); text-decoration: none; font-size: 14.5px; }
+  .toc-epic ul a:hover { color: var(--accent); }
+  .toc-id { color: var(--faint); font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; margin-right: 2px; }
+
+  .epic { margin-bottom: 56px; }
+  .epic > h2 {
+    display: flex; align-items: center; gap: 12px; font-size: 24px; letter-spacing: -0.01em;
+    margin: 0 0 22px; padding-bottom: 14px; border-bottom: 2px solid var(--line);
+  }
+  .epic-num {
+    display: inline-grid; place-items: center; width: 30px; height: 30px; flex: none;
+    background: var(--accent); color: #fff; border-radius: 9px; font-size: 15px; font-weight: 800;
+  }
+  nav .epic-num { width: 22px; height: 22px; font-size: 12px; border-radius: 7px; }
+
+  .story { border: 1px solid var(--line); border-radius: 14px; padding: 24px 26px 20px; margin-bottom: 18px; }
+  .story h3 { display: flex; align-items: center; gap: 10px; font-size: 18px; margin: 0 0 14px; }
+  .story-id {
+    flex: none; font-size: 12.5px; font-weight: 700; color: var(--accent);
+    background: var(--accent-soft); border-radius: 6px; padding: 2px 8px; font-variant-numeric: tabular-nums;
+  }
+  .story-sentence {
+    margin: 0 0 18px; padding: 12px 18px; background: var(--quote-bg);
+    border-left: 4px solid var(--quote-bar); border-radius: 0 10px 10px 0;
+    font-size: 16.5px; font-weight: 600;
+  }
+  .criteria-label { margin: 0 0 8px; font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); }
+  ul.criteria { list-style: none; margin: 0; padding: 0; }
+  ul.criteria li {
+    position: relative; padding: 7px 0 7px 32px; color: var(--fg);
+    border-bottom: 1px dashed var(--line); font-size: 15.5px;
+  }
+  ul.criteria li:last-child { border-bottom: 0; }
+  ul.criteria li::before {
+    content: ""; position: absolute; left: 4px; top: 13px; width: 15px; height: 15px;
+    border: 1.5px solid var(--check); border-radius: 4px;
+  }
+
+  footer.doc { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint); font-size: 13px; }
+
+  @media print {
+    body { font-size: 12px; }
+    .wrap { max-width: none; padding: 0; }
+    nav.toc { display: none; }
+    .story { break-inside: avoid; }
+  }
+</style>
+</head>
+<body style="overscroll-behavior-x: auto;">
+<div class="wrap">
+  <header class="doc">
+    <h1>User Story 샘플 (템플릿 예시)</h1>
+    <p class="doc-sub">epic → user story → 인수 조건(AC) 작성 예시. 실제 제품이 아닌 템플릿 샘플입니다.</p>
+    <div class="stats">
+      <span class="stat">에픽 7</span>
+      <span class="stat">유저 스토리 30</span>
+      <span class="stat">인수 조건 120</span>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <p>목차</p>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-1"><span class="epic-num">1</span> 계정·팀·로그인</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-1-1"><span class="toc-id">US-1.1</span> 팀 계정으로 로그인·로그아웃</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-1-2"><span class="toc-id">US-1.2</span> 팀원 초대</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-1-3"><span class="toc-id">US-1.3</span> 비밀번호 설정·재설정</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-1-4"><span class="toc-id">US-1.4</span> 역할에 따른 권한(소유자·대행자)</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-1-5"><span class="toc-id">US-1.5</span> 팀원·활동 기록 보기</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-2"><span class="epic-num">2</span> 상품 수집</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-2-1"><span class="toc-id">US-2.1</span> 타오바오 상품 링크로 상품 가져오기</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-2-2"><span class="toc-id">US-2.2</span> 타오바오 연결 상태 확인·재연결</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-3"><span class="epic-num">3</span> 판매 준비 (리스팅 작성)</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-1"><span class="toc-id">US-3.1</span> AI 한국어 초안 자동 생성</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-2"><span class="toc-id">US-3.2</span> 상품명·태그 생성</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-3"><span class="toc-id">US-3.3</span> 국내 시장가 확인과 판매가 반영</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-4"><span class="toc-id">US-3.4</span> 옵션별 가격·재고 관리</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-5"><span class="toc-id">US-3.5</span> 상품 이미지 속 중국어 자동 처리</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-3-6"><span class="toc-id">US-3.6</span> 판매 전 규정 위반 사전 경고</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-4"><span class="epic-num">4</span> 마켓 등록·관리</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-4-1"><span class="toc-id">US-4.1</span> 스마트스토어 상품 등록</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-4-2"><span class="toc-id">US-4.2</span> 등록 실패를 이해할 수 있는 안내</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-4-3"><span class="toc-id">US-4.3</span> 마켓에 이미 등록된 상품 가져오기</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-4-4"><span class="toc-id">US-4.4</span> 등록 상품 내리기 (판매 중지)</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-4-5"><span class="toc-id">US-4.5</span> 원본 상품 바로가기</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-5"><span class="epic-num">5</span> 주문 처리</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-1"><span class="toc-id">US-5.1</span> 주문 자동 수신</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-2"><span class="toc-id">US-5.2</span> 주문과 원본 상품 자동 연결</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-3"><span class="toc-id">US-5.3</span> 발주 확인</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-4"><span class="toc-id">US-5.4</span> 구매 진행 (타오바오에서 사기)</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-5"><span class="toc-id">US-5.5</span> 고객 배송지 확인·복사</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-5-6"><span class="toc-id">US-5.6</span> 송장 등록 (발송 처리)</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-6"><span class="epic-num">6</span> 운영 알림</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-6-1"><span class="toc-id">US-6.1</span> 알림 채널 한 곳에서 설정</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-6-2"><span class="toc-id">US-6.2</span> 시스템 상태 알림</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-6-3"><span class="toc-id">US-6.3</span> 작업 실패 알림</a></li></ul>
+</div>
+<div class="toc-epic">
+  <a class="toc-epic-title" href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#epic-7"><span class="epic-num">7</span> 기본 설정</a>
+  <ul><li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-7-1"><span class="toc-id">US-7.1</span> 가격 기본값</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-7-2"><span class="toc-id">US-7.2</span> 배송대행지 배송지</a></li>
+<li><a href="https://ws.nmwc.ai.kr/api/attachments/ecebc5b5-b665-4754-b7e1-0fd643020a00/raw#us-7-3"><span class="toc-id">US-7.3</span> 마켓·데이터 연동</a></li></ul>
+</div>
+  </nav>
+
+<section class="epic" id="epic-1">
+  <h2><span class="epic-num">1</span>계정·팀·로그인</h2>
+  <article class="story" id="us-1-1">
+    <h3><span class="story-id">US-1.1</span>팀 계정으로 로그인·로그아웃</h3>
+    <p class="story-sentence">셀러는 이메일과 비밀번호로 로그인하고, 끝나면 로그아웃한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>이메일과 비밀번호로 로그인하면 대시보드로 들어간다.</li>
+      <li>로그인하지 않고 주소로 바로 들어가려 하면 로그인 화면으로 보내지고, 로그인 후 원래 가려던 화면으로 이어진다.</li>
+      <li>이메일·비밀번호가 틀리면 안내가 보인다(어느 쪽이 틀렸는지는 알려주지 않음).</li>
+      <li>한 번 로그인하면 일정 기간 로그인 상태가 유지되고, 로그아웃하면 로그인 화면으로 돌아간다.</li>
+      <li>비밀번호는 화면에 다시 노출되지 않는다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-1-2">
+    <h3><span class="story-id">US-1.2</span>팀원 초대</h3>
+    <p class="story-sentence">셀러(소유자)는 함께 일할 팀원을 이메일로 초대한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>소유자는 '팀·권한' 화면에서 이메일을 입력해 팀원을 초대한다.</li>
+      <li>초대받은 사람에게 합류 링크가 담긴 메일이 전송된다.</li>
+      <li>링크를 열면 비밀번호를 정하고 바로 팀에 합류한다.</li>
+      <li>초대·재설정 링크가 만료·무효면 사유가 안내되고 다시 요청할 수 있다.</li>
+      <li>팀원 초대는 소유자만 할 수 있다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-1-3">
+    <h3><span class="story-id">US-1.3</span>비밀번호 설정·재설정</h3>
+    <p class="story-sentence">셀러는 초대 링크로 처음 비밀번호를 정하거나, 잊었을 때 재설정한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>초대 메일 링크를 열면 새 비밀번호를 정하는 화면이 나온다.</li>
+      <li>비밀번호는 8자 이상이어야 하고, 두 번 입력한 값이 같아야 한다.</li>
+      <li>너무 약하거나 유출된 비밀번호는 거절되고 이유가 안내된다.</li>
+      <li>비밀번호를 잊었을 때도 이메일로 재설정 링크를 받아 새로 정할 수 있다.</li>
+      <li>설정을 마치면 바로 대시보드로 들어간다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-1-4">
+    <h3><span class="story-id">US-1.4</span>역할에 따른 권한(소유자·대행자)</h3>
+    <p class="story-sentence">셀러는 자신의 역할에 맞는 범위만 사용한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>팀을 만든 첫 사람은 소유자, 초대받아 합류한 사람은 대행자가 된다.</li>
+      <li>상품 수집·리스팅·확정·가격 수정·마켓 등록·주문 처리 같은 일상 업무는 대행자도 할 수 있다.</li>
+      <li>마켓 연동 정보(비밀키)·팀원 관리·상품 삭제·감사 기록 조회 같은 민감한 작업은 소유자만 할 수 있다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-1-5">
+    <h3><span class="story-id">US-1.5</span>팀원·활동 기록 보기</h3>
+    <p class="story-sentence">셀러(소유자)는 현재 팀원과 각자의 역할, 그리고 누가 무엇을 했는지 기록을 확인한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>소유자는 '팀·권한' 화면에서 팀원의 이메일·역할·합류일을 목록으로 본다.</li>
+      <li>목록은 합류한 순서로 정렬된다.</li>
+      <li>같은 화면에서 확정·삭제·가격 수정·마켓 연동 변경 같은 주요 작업 기록(누가·언제·무엇을)을 확인할 수 있다.</li>
+      <li>활동 기록 조회는 소유자만 할 수 있다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-2">
+  <h2><span class="epic-num">2</span>상품 수집</h2>
+  <article class="story" id="us-2-1">
+    <h3><span class="story-id">US-2.1</span>타오바오 상품 링크로 상품 가져오기</h3>
+    <p class="story-sentence">셀러는 타오바오 상품 링크를 붙여넣어 상품 정보를 한 번에 가져온다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>상품 수집 화면에서 타오바오 상품 링크를 입력하면 수집이 시작된다.</li>
+      <li>링크 여러 개를 한 번에 붙여넣으면 각각 순서대로 수집된다.</li>
+      <li>수집이 완료되면 상품명(중국어 원문), 가격(위안), 상품 이미지, 옵션(색상·사이즈 등)과 옵션별 가격·재고가 저장된다.</li>
+      <li>수집 중인 상품은 목록에 "수집 중" 상태로 표시되고, 완료되면 자동으로 상품 카드로 바뀐다.</li>
+      <li>수집에 실패하면 실패한 링크와 사유가 표시되고, 닫기 버튼으로 닫을 수 있다. 같은 링크를 다시 시도해도 실패 안내가 중복으로 쌓이지 않는다.</li>
+      <li>하루 수집량에는 계정 보호를 위한 상한이 있고, 상한에 도달하면 사유가 안내된다.</li>
+      <li>수집이 완료된 상품은 곧바로 한국어 판매 문안 초안 생성이 자동으로 이어진다. 셀러가 따로 시작 버튼을 누르지 않아도 백그라운드에서 처리된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-2-2">
+    <h3><span class="story-id">US-2.2</span>타오바오 연결 상태 확인·재연결</h3>
+    <p class="story-sentence">셀러는 타오바오 연결 상태를 화면에서 확인하고, 끊겼으면 재연결할 수 있다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>화면 한쪽에 타오바오 연결 상태(연결됨 / 세션 만료 / 미연결)가 항상 표시된다.</li>
+      <li>실제 수집이 로그인 문제로 실패하는 순간 연결 상태도 함께 "세션 만료"로 바뀐다 — 상태는 "연결됨"인데 수집만 계속 실패하는 모순이 없어야 한다.</li>
+      <li>재로그인 버튼을 누르면 로그인 창이 열리고, 로그인을 마치면 상태가 "연결됨"으로 돌아오며 수집을 재개할 수 있다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-3">
+  <h2><span class="epic-num">3</span>판매 준비 (리스팅 작성)</h2>
+  <article class="story" id="us-3-1">
+    <h3><span class="story-id">US-3.1</span>AI 한국어 초안 자동 생성</h3>
+    <p class="story-sentence">셀러는 수집한 중국어 상품 정보를 한국어 판매 문안 초안으로 자동 변환한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>상품 수집이 끝나면 셀러가 버튼을 누르지 않아도, 곧바로 백그라운드에서 상품명·상세 설명·태그의 한국어 초안 생성이 시작된다.</li>
+      <li>리스팅 편집 화면에 들어가면 이미 만들어진 초안이 채워져 있고, 아직 준비 중이면 생성이 진행 중임을 알 수 있다.</li>
+      <li>초안에는 상품이미지 번역, 마켓 카테고리 매칭까지 수행되어야 한다.</li>
+      <li>원본(중국어)과 초안(한국어)을 나란히 비교해 볼 수 있고, 모든 항목을 직접 수정할 수 있다.</li>
+      <li>초안이 마음에 들지 않으면 "다시 생성"으로 새로 받을 수 있다.</li>
+      <li>작성 내용은 저장되어 나중에 다시 들어와도 이어서 편집할 수 있다.</li>
+      <li>상품을 다시 수집해도, 이미 셀러가 손본 초안은 자동 생성이 덮어쓰지 않는다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-3-2">
+    <h3><span class="story-id">US-3.2</span>상품명·태그 생성</h3>
+    <p class="story-sentence">셀러는 네이버 검색에 유리한 상품명과 태그를 추천받아 사용한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>생성되는 상품명은 검색 규칙(권장 글자 수, 특수문자·중복 단어 제한 등)에 맞게 자동 정리된다.</li>
+      <li>"키워드 조사"를 누르면 네이버 쇼핑에서 이 상품을 검색했을 때 상위에 노출되는 상품들의 상품명에서 자주 쓰이는 키워드를 추천받는다. 남의 상표(브랜드)로 의심되는 단어는 추천에서 제외된다.</li>
+      <li>추천 키워드를 클릭하면 태그로 추가되고, 이미 추가된 키워드는 구분되어 보인다. 핵심 키워드는 상품명 앞쪽에 배치하라는 팁이 안내된다.</li>
+      <li>태그는 최대 10개까지, 입력창에서 엔터 또는 쉼표로 추가하고 × 버튼으로 삭제한다. 한글 입력 도중 엔터를 눌러도 마지막 글자가 별도의 태그로 잘못 등록되지 않는다.</li>
+      <li>해외 구매대행 상품은 상품명에 [해외] 표기가 필요하다는 안내가 보이고, 클릭 한 번으로 넣을 수 있으며, 빠뜨린 채 등록해도 자동으로 보정된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-3-3">
+    <h3><span class="story-id">US-3.3</span>국내 시장가 확인과 판매가 반영</h3>
+    <p class="story-sentence">셀러는 같은 상품의 국내 판매 시세를 확인하고 판매가에 반영한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>판매가 화면에서 "시장가 조사"를 누르면 네이버 쇼핑의 유사 상품 가격 분포(최저가·중앙값·최고가)와 표본 수가 표시된다.</li>
+      <li>비교에 쓰인 상품 표본(상품명·가격·판매처·링크)이 함께 표시되어, 정말 유사한 상품인지 셀러가 눈으로 확인할 수 있다.</li>
+      <li>자동 검색어가 부정확하면 검색어를 직접 고쳐 다시 조사할 수 있다.</li>
+      <li>"중앙값에 맞추기" 등의 버튼을 누르면 마진율이 역산되어 판매가에 반영된다.</li>
+      <li>시장 중앙값이 원가 이하(역마진)면 반영 버튼이 숨겨지고 사유가 표시된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-3-4">
+    <h3><span class="story-id">US-3.4</span>옵션별 가격·재고 관리</h3>
+    <p class="story-sentence">셀러는 색상·사이즈 같은 옵션별로 가격과 재고를 확인하고 조정한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>옵션마다 판매가·재고를 개별 수정할 수 있고, 특정 옵션을 판매에서 제외할 수 있다.</li>
+      <li>전체 마진율을 바꾸면 옵션 가격이 자동으로 다시 계산되되, 셀러가 직접 지정한 옵션 가격은 덮어쓰지 않고 유지된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-3-5">
+    <h3><span class="story-id">US-3.5</span>상품 이미지 속 중국어 자동 처리</h3>
+    <p class="story-sentence">셀러는 상품 이미지 속 중국어 문구를 자동으로 지우고 한국어로 바꾼다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>AI 자동 생성 시 이미지 속 중국어 문구가 지워지고 한국어로 재생성 된다.</li>
+      <li>단색·그라데이션 배경 위 문구는 지운 흔적이 티 나지 않게 배경이 복원된다.</li>
+      <li>사진 위에 바로 얹힌 문구처럼 깨끗이 지우기 어려운 경우에는 원본을 훼손하는 대신 번역 라벨을 덧붙이는 안전한 방식으로 처리된다.</li>
+      <li>한국어 문구는 기계 번역투가 아니라 상품 정보(상품명·특장점)를 반영한 자연스러운 판매 문구로 재작성된다. 규격·수치·성분 같은 사실 정보는 정확하게 옮긴다.</li>
+      <li>브랜드명·로고는 번역하지 않고 그대로 둔다.</li>
+      <li>원본과 번역본 이미지를 나란히 비교할 수 있고, 마음에 들지 않으면 원본을 그대로 쓸 수 있다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-3-6">
+    <h3><span class="story-id">US-3.6</span>판매 전 규정 위반 사전 경고</h3>
+    <p class="story-sentence">셀러는 판매 전에 규정에 걸릴 수 있는 상품·문구를 미리 경고받는다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>어린이용 상품(인형·완구 등)으로 분류될 수 있으면 "KC 인증 없이는 구매대행 판매가 제한될 수 있다"는 경고와 대응 방법(분류 조정, 키덜트 전환 등)이 안내된다.</li>
+      <li>상표권 침해 의심 단어, 식품·의약품 관련 표현 등 위험 요소가 있으면 항목별 경고와 대응 방법이 표시된다.</li>
+      <li>경고는 등록을 강제로 막지 않지만(최종 판단은 셀러), 등록 직전 점검 단계에서 한 번 더 보인다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-4">
+  <h2><span class="epic-num">4</span>마켓 등록·관리</h2>
+  <article class="story" id="us-4-1">
+    <h3><span class="story-id">US-4.1</span>스마트스토어 상품 등록</h3>
+    <p class="story-sentence">셀러는 준비한 상품을 스마트스토어에 등록한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>작성 완료한 상품을 골라 스마트스토어에 등록할 수 있다.</li>
+      <li>등록 전에 필수 정보(카테고리, 상품정보고시, 판매자 정보 등)가 채워졌는지 자동 점검되고, 빠진 항목이 구체적으로 안내된다.</li>
+      <li>카테고리는 "자동 찾기"로 후보를 추천받아 클릭으로 선택할 수 있다.</li>
+      <li>등록에 성공하면 등록 상품 목록에 "판매중"으로 나타난다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-4-2">
+    <h3><span class="story-id">US-4.2</span>등록 실패를 이해할 수 있는 안내</h3>
+    <p class="story-sentence">셀러는 등록이 실패하면 이유와 고칠 항목을 쉬운 말로 안내받는다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>등록 실패 시 마켓의 원문 오류 대신 "원인 요약 + 해결 단계" 형식의 안내가 표시된다.</li>
+      <li>안내문은 중간에 잘리지 않고 전부 읽을 수 있으며, 필요하면 원문 메시지도 펼쳐 볼 수 있다.</li>
+      <li>알려지지 않은 새로운 실패 유형은 가공하지 않고 원문 그대로 보여준다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-4-3">
+    <h3><span class="story-id">US-4.3</span>마켓에 이미 등록된 상품 가져오기</h3>
+    <p class="story-sentence">셀러는 마켓에 이미 올려둔 상품을 이 서비스로 불러온다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>"스마트스토어에서 가져오기"를 누르면 실제 마켓에 등록된 내 상품 전체가 목록으로 들어온다(상품명·가격·재고·판매 상태 포함).</li>
+      <li>서비스로 등록한 상품과 밖에서 등록한 상품("가져옴")이 구분되어 표시된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-4-4">
+    <h3><span class="story-id">US-4.4</span>등록 상품 내리기 (판매 중지)</h3>
+    <p class="story-sentence">셀러는 등록한 상품을 마켓에서 판매 중지하고 목록에서 내린다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>등록 상품을 제거하면 마켓에서 해당 상품이 판매 중지된 뒤 목록에서 사라진다.</li>
+      <li>제거 전 "판매중지·제거" 확인 단계를 거친다(실수 방지).</li>
+      <li>판매 중지는 삭제가 아니어서 마켓 판매자센터에서 되돌릴 수 있다.</li>
+      <li>판매 중지에 실패하면(이미 삭제된 상품 등) 사유가 표시되고 "목록에서만 제거"를 선택할 수 있으며, 이 경우 마켓에는 아직 남아 있을 수 있음을 알려준다.</li>
+      <li>마켓 기록이 없는 항목(테스트 등록 등)은 목록에서만 제거되며, 버튼 안내 문구로 구분된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-4-5">
+    <h3><span class="story-id">US-4.5</span>원본 상품 바로가기</h3>
+    <p class="story-sentence">셀러는 등록한 상품에서 원본 타오바오 상품 페이지로 바로 이동한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>등록 상품 목록의 각 상품에 "타오바오 원본" 링크가 표시된다(서비스로 등록해 원본을 아는 상품에 한함).</li>
+      <li>원본을 알 수 없는 상품(마켓에서 가져온 상품)에는 링크가 표시되지 않는다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-5">
+  <h2><span class="epic-num">5</span>주문 처리</h2>
+  <article class="story" id="us-5-1">
+    <h3><span class="story-id">US-5.1</span>주문 자동 수신</h3>
+    <p class="story-sentence">셀러는 마켓에 들어온 주문을 서비스에서 자동으로 받아 본다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>스마트스토어에 결제 완료된 새 주문이 생기면 별도 조작 없이 5분 이내에 주문 관리 화면에 나타난다.</li>
+      <li>신규 주문이 들어오면 메신저 주문 채널로 알림이 온다. 같은 시점에 여러 건이 들어오면 한 메시지로 묶인다.</li>
+      <li>주문 관리 화면은 신규주문 / 배송준비중 / 배송중 / 배송완료 / 취소·반품 탭으로 나뉘고, 탭마다 건수가 표시된다.</li>
+      <li>각 주문에 주문번호, 주문 시각, 수령인·연락처, 상품명·옵션, 수량, 결제 금액, 마켓이 표시된다.</li>
+      <li>주문번호·주문자·전화번호·상품명으로 검색할 수 있다.</li>
+      <li>마켓에서 취소·반품이 발생하면 해당 주문이 자동으로 취소·반품 탭으로 이동하고, 배송 완료도 자동 반영된다.</li>
+      <li>미결제 주문은 목록에 나타나지 않는다(결제가 완료되면 그때 들어온다).</li>
+    </ul>
+  </article>
+  <article class="story" id="us-5-2">
+    <h3><span class="story-id">US-5.2</span>주문과 원본 상품 자동 연결</h3>
+    <p class="story-sentence">셀러는 들어온 주문이 어떤 타오바오 원본 상품인지 자동으로 연결되어 확인한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>새 주문은 자동으로 원본 타오바오 상품과 연결되어 "원본 매칭" 상태로 들어온다.</li>
+      <li>주문 행에 원본 상품 썸네일과 "타오바오 원본" 링크(새 탭)가 표시된다.</li>
+      <li>원본을 찾을 수 없는 주문(서비스 밖에서 등록한 상품 등)은 "원본 미매칭"으로 정직하게 표시된다.</li>
+      <li>나중에 해당 상품이 서비스에 연결되면 기존 미매칭 주문도 자동으로 다시 연결된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-5-3">
+    <h3><span class="story-id">US-5.3</span>발주 확인</h3>
+    <p class="story-sentence">셀러는 주문을 확인 처리해 마켓에 접수 사실을 알린다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>신규 주문 행의 "발주 확인" 버튼으로 마켓에 접수 통지를 보낼 수 있다.</li>
+      <li>성공하면 "발주확인됨" 표시가 남고 버튼은 사라진다.</li>
+      <li>실패하면(이미 처리된 주문 등) 마켓이 알려 준 사유가 해당 주문 행에 표시된다.</li>
+      <li>발주 확인은 자동으로 실행되지 않는다 — 항상 셀러가 버튼을 누른 경우에만(재고 확인 전 접수를 방지).</li>
+    </ul>
+  </article>
+  <article class="story" id="us-5-4">
+    <h3><span class="story-id">US-5.4</span>구매 진행 (타오바오에서 사기)</h3>
+    <p class="story-sentence">셀러는 주문에 맞는 타오바오 상품·옵션·수량과 배송지를 한자리에서 확인해 실제로 구매한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>"구매 진행"을 누르면 주문 옵션(한국어), 사야 할 원본 옵션(중국어 원문), 수량, 타오바오 원본 링크가 한 패널에 표시된다.</li>
+      <li>미리 설정해 둔 배송대행지 주소를 "배송지 복사" 버튼으로 복사해 타오바오 결제 화면에 붙여넣을 수 있다. 아직 설정 전이면 설정 화면으로 안내된다.</li>
+      <li>결제를 마치고 "구매 완료"를 누르면 주문이 배송준비중으로 이동한다. 타오바오 주문번호를 함께 기록할 수 있다(선택 — 배송대행지 입고 대조용).</li>
+      <li>결제 자체는 서비스가 대신하지 않는다(정책상 사람이 직접 수행).</li>
+      <li>원본 옵션을 자동으로 찾지 못한 경우 "원본 페이지에서 옵션을 확인하라"는 안내가 표시된다.</li>
+      <li>이미 구매 처리된 주문에는 구매 완료를 중복 실행할 수 없다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-5-5">
+    <h3><span class="story-id">US-5.5</span>고객 배송지 확인·복사</h3>
+    <p class="story-sentence">셀러는 주문 고객의 배송지 정보를 확인하고 한 번에 복사한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>주문에서 수령인 이름·연락처·주소·우편번호를 확인하고 복사할 수 있다.</li>
+      <li>해외직구 통관에 필요한 개인통관고유부호가 주문에 있으면 함께 표시된다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-5-6">
+    <h3><span class="story-id">US-5.6</span>송장 등록 (발송 처리)</h3>
+    <p class="story-sentence">셀러는 택배사와 송장 번호를 입력해 주문을 발송 처리한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>주문 행에서 택배사를 선택하고 송장번호를 입력해 발송 처리할 수 있다(주요 택배사 목록 제공).</li>
+      <li>송장번호가 비어 있으면 발송 처리 버튼이 눌리지 않는다.</li>
+      <li>성공하면 마켓에 송장이 등록되고 주문이 "배송중"으로 이동한다.</li>
+      <li>실패하면(잘못된 송장번호 등) 사유가 그 행에 표시되고, 고쳐서 다시 시도할 수 있다.</li>
+      <li>취소·반품된 주문에는 송장을 등록할 수 없다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-6">
+  <h2><span class="epic-num">6</span>운영 알림</h2>
+  <article class="story" id="us-6-1">
+    <h3><span class="story-id">US-6.1</span>알림 채널 한 곳에서 설정</h3>
+    <p class="story-sentence">셀러는 어떤 알림을 어디로 받을지 한 화면에서 설정한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>연결 설정의 "Webhook 알림" 탭에서 알림 채널 주소 3개(배포·시스템 상태 / 장애·에러 / 주문)를 등록·수정할 수 있다.</li>
+      <li>쓰고 싶은 채널만 입력해도 된다(모두 선택 사항). 채널별로 어떤 알림이 오는지 설명이 함께 보인다.</li>
+      <li>저장된 주소는 암호화 보관되고, 수정 시 기존 값은 "저장됨"으로 표시되며 새로 입력한 항목만 바뀐다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-6-2">
+    <h3><span class="story-id">US-6.2</span>시스템 상태 알림</h3>
+    <p class="story-sentence">셀러는 자동화가 켜졌는지·멈췄는지 같은 상태 변화를 알림으로 받는다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>새 버전이 배포되면 배포 채널로 알림이 온다(웹 배포와 자동화 프로그램 배포가 구분됨).</li>
+      <li>자동화 프로그램이 꺼졌다 다시 켜지거나, 비정상 종료 후 복구되면 상황별로 구분된 알림이 온다.</li>
+      <li>프로그램이 예고 없이 멈추면(5분 이상 신호 없음) 장애·에러 채널로 다운 알림이 온다. 같은 장애로 알림이 반복해 쏟아지지 않는다(에피소드당 1회).</li>
+      <li>개발 중의 잦은 재시작 같은 무의미한 이벤트로 채널이 도배되지 않는다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-6-3">
+    <h3><span class="story-id">US-6.3</span>작업 실패 알림</h3>
+    <p class="story-sentence">셀러는 자동 작업이 실패하면 무엇이 왜 실패했는지 알림으로 받는다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>작업이 재시도 끝에 최종 실패하면 장애·에러 채널로 작업 종류와 사유가 알림으로 온다.</li>
+      <li>같은 원인의 연쇄 실패(예: 로그인 만료로 여러 건 실패)는 10분에 1건으로 묶인다.</li>
+    </ul>
+  </article>
+</section>
+<section class="epic" id="epic-7">
+  <h2><span class="epic-num">7</span>기본 설정</h2>
+  <article class="story" id="us-7-1">
+    <h3><span class="story-id">US-7.1</span>가격 기본값</h3>
+    <p class="story-sentence">셀러는 마진율·환율 같은 가격 기본값을 미리 정해 둔다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>환율, 배송대행 비용, 마켓 수수료율, 목표 마진율, 판매가 올림 단위를 저장하면 새 리스팅 작성에 자동 적용된다.</li>
+      <li>이미 작성한 상품의 가격은 설정을 바꿔도 변하지 않는다(작성 시점 기준 유지).</li>
+    </ul>
+  </article>
+  <article class="story" id="us-7-2">
+    <h3><span class="story-id">US-7.2</span>배송대행지 배송지</h3>
+    <p class="story-sentence">셀러는 자주 쓰는 배송대행지 주소를 저장해 둔다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>배송대행지가 발급한 수취인·주소·연락처를 형식 그대로 저장할 수 있다.</li>
+      <li>저장한 값은 주문의 구매 진행 패널에서 복사 버튼으로 바로 쓸 수 있다.</li>
+    </ul>
+  </article>
+  <article class="story" id="us-7-3">
+    <h3><span class="story-id">US-7.3</span>마켓·데이터 연동</h3>
+    <p class="story-sentence">셀러는 판매할 마켓 계정과 연동 정보를 등록한다.</p>
+    <p class="criteria-label">인수 조건</p>
+    <ul class="criteria">
+      <li>스마트스토어 등 마켓의 연동 정보를 등록하고 "연결 확인" 버튼으로 유효성을 검증할 수 있다.</li>
+      <li>연동 정보는 암호화되어 저장되고, 화면에 원문이 다시 노출되지 않는다.</li>
+      <li>마켓 호출이 차단될 경우 등록해야 할 (서버가 돌고있는)접속 주소(IP)가 화면에 안내된다.</li>
+    </ul>
+  </article>
+</section>
+
+  <footer class="doc">NMWC 커머스 · User Story (이유 생략) · 템플릿 예시</footer>
+</div>
+<script defer="" src="./NMWC 커머스 — User Story_files/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;82b115f912984523bfac10c3939666db&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body></html>
