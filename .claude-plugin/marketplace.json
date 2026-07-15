@@ -896,6 +896,19 @@
         "spec-driven-development",
         "design-doc"
       ]
+    },
+    {
+      "name": "nmwc-eval",
+      "description": "NMWC 팀 공통 규격의 구현 검증(eval) 스킬. PRD의 인수 조건(AC)·Non-Requirements·Principles와 spec.md의 설계를 정본으로 삼아, 실제 구현된 코드가 그것들에 부합하는지 검토하고 EVAL.md로 PASS/PARTIAL/FAIL을 남긴다. 코드 리뷰뿐 아니라 claude-in-chrome으로 실제 브라우저를 붙여 유저 플로우·UX·시각적 완성도까지 확인한다. \"구현 검증해줘\", \"AC 통과했는지 확인\", \"스펙대로 됐는지 봐줘\", \"배포 전에 검증\" 요청 시 사용.",
+      "version": "1.0.0",
+      "source": "./skills/nmwc-eval",
+      "category": "planning",
+      "tags": [
+        "eval",
+        "verification",
+        "qa",
+        "acceptance-criteria"
+      ]
     }
   ]
 }
