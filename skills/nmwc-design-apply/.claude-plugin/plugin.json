@@ -1,5 +1,5 @@
 {
-  "name": "design-token-apply",
+  "name": "nmwc-design-apply",
   "description": "MCP 기반 디자인 토큰/컴포넌트 계약(get_token·get_component·validate_code·suggest_token·scaffold 패턴)을 자동 탐지해 새 UI를 제작하거나 기존 코드를 토큰 규격으로 폴리싱한다. \"디자인 폴리싱\", \"토큰 적용해줘\", \"디자인 시스템 적용해줘\", \"이 페이지 토큰화\", \"apply design tokens\", \"polish this page to the design system\" 요청 시 사용.",
   "version": "1.0.0"
 }

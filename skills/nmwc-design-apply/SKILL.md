@@ -1,9 +1,9 @@
 ---
-name: design-token-apply
+name: nmwc-design-apply
 description: MCP 기반 디자인 토큰/컴포넌트 계약(get_token·get_component·validate_code·suggest_token·scaffold 패턴)을 자동 탐지해 새 UI를 제작하거나 기존 코드를 토큰 규격으로 폴리싱한다. "디자인 폴리싱", "토큰 적용해줘", "디자인 시스템 적용해줘", "이 페이지 토큰화", "apply design tokens", "polish this page to the design system" 요청 시 사용.
 ---
 
-# 디자인 토큰 적용 (design-token-apply)
+# 디자인 토큰 적용 (nmwc-design-apply)
 
 MCP로 노출된 디자인 토큰/컴포넌트 계약을 갖춘 프로젝트라면 어디서든 동작하는 범용 스킬이다. 새 UI를 스캐폴딩하거나(제작 모드) 기존 코드의 raw 값을 토큰으로 치환한다(폴리싱 모드). 어느 모드인지는 요청 대상을 보고 스스로 판단한다 — 사용자가 모드를 지정할 필요 없다.
 
