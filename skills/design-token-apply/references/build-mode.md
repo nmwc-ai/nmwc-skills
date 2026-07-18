@@ -1,4 +1,4 @@
-# 제작 모드 (1-3단계)
+# 제작 모드 (1-4단계)
 
 요청 대상이 **새 파일이거나 빈 페이지**일 때 이 모드로 진행한다.
 
@@ -17,4 +17,6 @@
 - 새 컴포넌트 클래스를 임의로 만들지 않는다. 필요한 컴포넌트가 캐넌 목록에 없으면 `references/edge-cases.md`의 절차를 따른다.
 - raw hex, 임의 px, 인라인 `:root` 오버라이드를 절대 쓰지 않는다 — 전부 `get_token`으로 조회한 `var(--...)` 참조를 쓴다.
 
-작업이 끝나면 4단계(Verify, `references/polish-mode.md` 참조)의 검증 게이트를 동일하게 통과시킨다 — 제작 모드도 완료 전 `validate_code`/lint 0 violation을 확인한다.
+## 4. Verify
+
+제작 모드도 완료 전 `validate_code`/lint 0 violation을 확인한다. 상세 재시도·보고 절차는 `references/polish-mode.md`의 4단계(Verify — 검증 게이트)를 그대로 따른다 — 두 모드가 같은 게이트를 공유한다.
